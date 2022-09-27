@@ -43,20 +43,19 @@ namespace Devs2Blu.ProjetosAula.AulaOOP2
         private void button2_Click(object sender, EventArgs e)
         {
             Limpar();
+            
         }
 
         private void buttonMostrar_Click(object sender, EventArgs e)
         {
             txtConsole.Clear();
-            foreach(Contato contato in Contatos)
-            {
-                txtConsole.Text += $"Contato: {contato.Nome} \r\n";
-            }
+            Contatos.ForEach(contato => { txtConsole.Text += $"Contato: {contato.Nome} \r\n"; });
+
         }
 
         private void textBoxCep_TextChanged(object sender, EventArgs e)
         {
-            if(textBoxCep.Text.Length == 8)
+            if(textBoxCep.Text.Length != 8)
             {
 
             }
@@ -95,6 +94,10 @@ namespace Devs2Blu.ProjetosAula.AulaOOP2
             if (textBoxCep.Text.Equals("")) return false;
             if (textBoxEmail.Text.Equals("")) return false;
             return true;
+        }
+        public void Teste(ref int ada)
+        {
+            ada++;
         }
         #endregion
 

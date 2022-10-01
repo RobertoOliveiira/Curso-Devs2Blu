@@ -62,12 +62,12 @@ namespace Devs2Blu.ProjetosAula.OOP3.Main.Cadastros
         {
             Int32 opcao;
             Console.Clear();
-            Console.WriteLine("----- Cadastro de Fornecedor -----");
-            Console.WriteLine("----- 1- Lista de Fornecedor -----");
-            Console.WriteLine("----- 2- Cadastro de Fornecedor -----");
-            Console.WriteLine("----- 3- Alterar Fornecedors -----");
-            Console.WriteLine("---------------------");
-            Console.WriteLine("----- 0- Sair -----");
+            Console.WriteLine("---------- Cadastro de Fornecedor ----------");
+            Console.WriteLine("-   - 1 -   Lista de Fornecedor        -----");
+            Console.WriteLine("-   - 2 - Cadastro de Fornecedor       -----");
+            Console.WriteLine("-   - 3 -   Alterar Fornecedors        -----");
+            Console.WriteLine("-   - 0 -         Sair                 -----");
+            Console.WriteLine("--------------------------------------------");
             Int32.TryParse(Console.ReadLine(), out opcao);
             return opcao;
         }
@@ -115,7 +115,7 @@ namespace Devs2Blu.ProjetosAula.OOP3.Main.Cadastros
 
             do
             {
-                Console.WriteLine($"Fornecedor: {fornecedor.Codigo}/{fornecedor.CodigoFornecedor} | Nome: {fornecedor.Nome} | CPF: {fornecedor.CGCCPF} | Tipo de forncedor: {fornecedor.TipoFornecedor}");
+                Console.WriteLine($"Informações do fornecedor: {fornecedor.Codigo}/{fornecedor.CodigoFornecedor} | Nome: {fornecedor.Nome} | CPF: {fornecedor.CGCCPF} | Tipo de forncedor: {fornecedor.TipoFornecedor}");
                 Console.WriteLine("Qual campo deseja alterar?");
                 Console.WriteLine("01 - Nome | 02 - CPF | 03 Convênio | 04 Tipo de Fornecedor | 00 - SAIR");
                 opcaoAlterar = Console.ReadLine();

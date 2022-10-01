@@ -62,12 +62,12 @@ namespace Devs2Blu.ProjetosAula.OOP3.Main.Cadastros
         {
             Int32 opcao;
             Console.Clear();
-            Console.WriteLine("----- Cadastro de Recepcionista -----");
-            Console.WriteLine("----- 1- Lista de Recepcionista -----");
-            Console.WriteLine("----- 2- Cadastro de Recepcionista -----");
-            Console.WriteLine("----- 3- Alterar Recepcionista -----");
-            Console.WriteLine("---------------------");
-            Console.WriteLine("----- 0- Sair -----");
+            Console.WriteLine("---------- Cadastro de Recepcionista ----------");
+            Console.WriteLine("-   - 1 -   Lista de Recepcionista        -----");
+            Console.WriteLine("-   - 2 - Cadastro de Recepcionista       -----");
+            Console.WriteLine("-   - 3 -   Alterar Recepcionista         -----");
+            Console.WriteLine("-   - 0 -          Sair                   -----");
+            Console.WriteLine("-----------------------------------------------");
             Int32.TryParse(Console.ReadLine(), out opcao);
             return opcao;
         }
@@ -115,7 +115,7 @@ namespace Devs2Blu.ProjetosAula.OOP3.Main.Cadastros
 
             do
             {
-                Console.WriteLine($"Recepcionista: {recepcionista.Codigo}/{recepcionista.CodigoRecepcionista} | Nome: {recepcionista.Nome} | CPF: {recepcionista.CGCCPF} | Setor: {recepcionista.Setor}");
+                Console.WriteLine($"Informações da recepcionista: {recepcionista.Codigo}/{recepcionista.CodigoRecepcionista} | Nome: {recepcionista.Nome} | CPF: {recepcionista.CGCCPF} | Setor: {recepcionista.Setor}");
                 Console.WriteLine("Qual campo deseja alterar?");
                 Console.WriteLine("01 - Nome | 02 - CPF | 03 Setor | 00 - SAIR");
                 opcaoAlterar = Console.ReadLine();

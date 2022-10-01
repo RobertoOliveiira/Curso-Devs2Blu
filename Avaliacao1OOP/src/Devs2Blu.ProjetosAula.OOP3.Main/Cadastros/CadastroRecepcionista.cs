@@ -66,6 +66,7 @@ namespace Devs2Blu.ProjetosAula.OOP3.Main.Cadastros
             Console.WriteLine("-   - 1 -   Lista de Recepcionista        -----");
             Console.WriteLine("-   - 2 - Cadastro de Recepcionista       -----");
             Console.WriteLine("-   - 3 -   Alterar Recepcionista         -----");
+            Console.WriteLine("-   - 4 -   Excluir Recepcionista         -----");
             Console.WriteLine("-   - 0 -          Sair                   -----");
             Console.WriteLine("-----------------------------------------------");
             Int32.TryParse(Console.ReadLine(), out opcao);
@@ -151,7 +152,18 @@ namespace Devs2Blu.ProjetosAula.OOP3.Main.Cadastros
 
         public void Excluir()
         {
-            Recepcionista recepcionista = new Recepcionista();
+            Console.Clear();
+            Recepcionista recepcionista;
+            int codigoRecepcionista;
+
+            Console.WriteLine("| Lista de Recepcionistas: ");
+            ListarRecepcionistasByCodeAndName();
+            Console.WriteLine("| Informe o código do recepcionista que deseja excluir: ");
+            Int32.TryParse(Console.ReadLine(), out codigoRecepcionista);
+
+            recepcionista = Program.Mock.ListaRecepcionistas.Find(p => p.CodigoRecepcionista == codigoRecepcionista);
+
+
             ExcluirRecepcionista(recepcionista);
         }
 

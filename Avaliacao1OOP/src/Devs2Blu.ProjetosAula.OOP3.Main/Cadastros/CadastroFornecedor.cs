@@ -65,7 +65,8 @@ namespace Devs2Blu.ProjetosAula.OOP3.Main.Cadastros
             Console.WriteLine("---------- Cadastro de Fornecedor ----------");
             Console.WriteLine("-   - 1 -   Lista de Fornecedor        -----");
             Console.WriteLine("-   - 2 - Cadastro de Fornecedor       -----");
-            Console.WriteLine("-   - 3 -   Alterar Fornecedors        -----");
+            Console.WriteLine("-   - 3 -   Alterar Fornecedor         -----");
+            Console.WriteLine("-   - 4 -   Excluir Fornecedor         -----");
             Console.WriteLine("-   - 0 -         Sair                 -----");
             Console.WriteLine("--------------------------------------------");
             Int32.TryParse(Console.ReadLine(), out opcao);
@@ -151,7 +152,18 @@ namespace Devs2Blu.ProjetosAula.OOP3.Main.Cadastros
 
         public void Excluir()
         {
-            Fornecedor fornecedor = new Fornecedor();
+            Console.Clear();
+            Fornecedor fornecedor;
+            int codigoFornecedor;
+
+            Console.WriteLine("Lista de Fornecedors: ");
+            ListarFornecedorsByCodeAndName();
+            Console.WriteLine("Informe o código do fornecedor que deseja excluir: ");
+            Int32.TryParse(Console.ReadLine(), out codigoFornecedor);
+
+            fornecedor = Program.Mock.ListaFornecedores.Find(p => p.CodigoFornecedor == codigoFornecedor);
+
+
             ExcluirFornecedor(fornecedor);
         }
 

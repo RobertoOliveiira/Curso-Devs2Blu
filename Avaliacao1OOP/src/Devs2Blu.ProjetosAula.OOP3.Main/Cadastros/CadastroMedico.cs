@@ -68,6 +68,7 @@ namespace Devs2Blu.ProjetosAula.OOP3.Main.Cadastros
             Console.WriteLine("-   - 1 -   Lista de Medico        -----");
             Console.WriteLine("-   - 2 - Cadastro de Medico       -----");
             Console.WriteLine("-   - 3 -   Alterar Medico         -----");
+            Console.WriteLine("-   - 4 -   Excluir Medico         -----");
             Console.WriteLine("-   - 0 -         Sair             -----");
             Console.WriteLine("----------------------------------------");
             Int32.TryParse(Console.ReadLine(), out opcao);
@@ -160,7 +161,18 @@ namespace Devs2Blu.ProjetosAula.OOP3.Main.Cadastros
 
         public void Excluir()
         {
-            Medico medico = new Medico();
+            Console.Clear();
+            Medico medico;
+            int codigoMedico;
+
+            Console.WriteLine("Lista de Medicos: ");
+            ListarMedicosByCodeAndName();
+            Console.WriteLine("Informe o código do medico que deseja excluir: ");
+            Int32.TryParse(Console.ReadLine(), out codigoMedico);
+
+            medico = Program.Mock.ListaMedicos.Find(p => p.CodigoMedico == codigoMedico);
+
+
             ExcluirMedico(medico);
         }
 

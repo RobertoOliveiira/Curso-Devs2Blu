@@ -27,6 +27,9 @@ namespace Devs2Blu.ProjetosAula.OOP3.Main.Utils
         {
             CargaPacientes();
             CargaMedicos();
+            CargaFornecedor();
+            CargaRecepcionista();
+
         }
 
         public void CargaPacientes()
@@ -41,11 +44,31 @@ namespace Devs2Blu.ProjetosAula.OOP3.Main.Utils
         public void CargaMedicos()
         {
             Random rd = new Random();
-            String[] especialidades = {"Clínico Geral", "Neurologista", "Ginecologista", "Pediatra"};
+            String[] especialidades = {"Clínico Geral", "Neurologista", "Ginecologista", "Pediatra"}; 
             for (int i = 0; i < 4; i++)
             {
                 Medico medico = new Medico(i, $"Médico {i + 1}", $"{i + rd.Next(0, 5)}23{i + rd.Next(0, 5)}56{i + rd.Next(0, 5)}891{i + rd.Next(0, 5)}",rd.Next(321, 789) , especialidades[rd.Next(0, 3)]);
                 ListaMedicos.Add(medico);
+            }
+        }
+        public void CargaRecepcionista()
+        {
+            Random rd = new Random();
+            String[] especialidades = { "Recepcionista Geral", "Recepcionista de Neurologista", "Recepcionista de Ginecologista", "Recepcionista de Pediatra" };
+            for (int i = 0; i < 4; i++)
+            {
+                Recepcionista recepcionista = new Recepcionista(i, $"Recepcionista {i + 1}", $"{i + rd.Next(0, 5)}23{i + rd.Next(0, 5)}56{i + rd.Next(0, 5)}891{i + rd.Next(0, 5)}",  especialidades[rd.Next(0, 3)]);
+                ListaRecepcionistas.Add(recepcionista);
+            }
+        }
+        public void CargaFornecedor()
+        {
+            Random rd = new Random();
+            String[] tipoFornecedor = { "Clínico Geral", "Neurologista", "Ginecologista", "Pediatra" };
+            for (int i = 0; i < 4; i++)
+            {
+                Fornecedor fornecedor = new Fornecedor(i, $"Fornecedor {i + 1}", $"{i + rd.Next(0, 5)}23{i + rd.Next(0, 5)}56{i + rd.Next(0, 5)}891{i + rd.Next(0, 5)}", tipoFornecedor[rd.Next(0, 3)]);
+                ListaFornecedores.Add(fornecedor);
             }
         }
     }

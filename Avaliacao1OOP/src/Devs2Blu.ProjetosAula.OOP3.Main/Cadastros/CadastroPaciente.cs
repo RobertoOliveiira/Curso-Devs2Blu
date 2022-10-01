@@ -64,12 +64,12 @@ namespace Devs2Blu.ProjetosAula.OOP3.Main.Cadastros
         {
             Int32 opcao;
             Console.Clear();
-            Console.WriteLine("----- Cadastro de Pacientes -----");
-            Console.WriteLine("----- 1- Lista de Pacientes -----");
-            Console.WriteLine("----- 2- Cadastro de Pacientes -----");
-            Console.WriteLine("----- 3- Alterar Pacientes -----");
-            Console.WriteLine("---------------------");
-            Console.WriteLine("----- 0- Sair -----");
+            Console.WriteLine("---------- Cadastro de Paciente ----------");
+            Console.WriteLine("-   - 1 -   Lista de Paciente        -----");
+            Console.WriteLine("-   - 2 - Cadastro de Paciente       -----");
+            Console.WriteLine("-   - 3 -   Alterar Paciente         -----");
+            Console.WriteLine("-   - 0 -         Sair               -----");
+            Console.WriteLine("------------------------------------------");
             Int32.TryParse(Console.ReadLine(), out opcao);
             return opcao;
         }
@@ -117,7 +117,7 @@ namespace Devs2Blu.ProjetosAula.OOP3.Main.Cadastros
 
             do
             {
-                Console.WriteLine($"Paciente: {paciente.Codigo}/{paciente.CodigoPaciente} | Nome: {paciente.Nome} | CPF: {paciente.CGCCPF} | Convênio: {paciente.Convenio}");
+                Console.WriteLine($"Informações do paciente: {paciente.Codigo}/{paciente.CodigoPaciente} | Nome: {paciente.Nome} | CPF: {paciente.CGCCPF} | Convênio: {paciente.Convenio}");
                 Console.WriteLine("Qual campo deseja alterar?");
                 Console.WriteLine("01 - Nome | 02 - CPF | 03 Convênio | 00 - SAIR");
                 opcaoAlterar = Console.ReadLine();

@@ -1,0 +1,113 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  background-color: #c0caec;
+}
+
+/* Header */
+header {
+  border-bottom: 2px solid #111;
+  width: 100vw;
+  height: 100px;
+  padding: 0.5em;
+  background-color: #553589;
+}
+
+figure {
+  height: 80px;
+
+  display: inline-flex;
+}
+
+header > figure {
+  color: #fff;
+}
+
+header figure img {
+  width: 64px;
+  height: 64px;
+  line-height: 100px;
+}
+
+header figure figcaption {
+  margin-left: 1em;
+  font-size: 14px;
+}
+
+/* Main */
+
+.wrapper {
+  display: block;
+  width: 90vw;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+main {
+  display: block;
+  border: 1px solid #111;
+  padding: 1em;
+  box-shadow: 3px 2px 4px #808fc0;
+  border-radius: 8px;
+}
+
+.Name
+{
+    font-size: xx-large;
+    font-weight: bold;
+    padding-left: 20px;
+    text-align: center;
+}
+
+.content
+{
+    display: flex;
+    margin: auto;
+    align-items: center;
+border-bottom: 1px solid #000;
+}
+
+.image
+{
+    width: 70px;
+    border-radius: 50%;
+}
+
+div.conteudo {
+  padding: 0.5em;
+  text-align: justify;
+  margin-top: 1em;
+}
+
+div.conteudo p {
+  text-indent: 1.5em;
+}
+
+/* Footer */
+footer {
+  width: 100vw;
+  border-top: 3px solid #000;
+  padding: 0.5em;
+  background-color: #ccc;
+}
+
+/* Credits */
+
+#credits {
+  width: 100vw;
+  text-align: center;
+  font-size: 8px;
+}
+
+#credits a {
+  font-style: italic;
+}

@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Emiral Script PERSONAL USE';
+    src: url('fonts/EmiralScriptPERSONALUSE.eot');
+    src: url('fonts/EmiralScriptPERSONALUSE.eot?#iefix') format('embedded-opentype'),
+         url('fonts/EmiralScriptPERSONALUSE.woff2') format('woff2'),
+         url('fonts/EmiralScriptPERSONALUSE.woff') format('woff'),
+         url('fonts/EmiralScriptPERSONALUSE.ttf')  format('truetype'),
+         url('fonts/EmiralScriptPERSONALUSE.svg#Emiral Script PERSONAL USE') format('svg');
+}

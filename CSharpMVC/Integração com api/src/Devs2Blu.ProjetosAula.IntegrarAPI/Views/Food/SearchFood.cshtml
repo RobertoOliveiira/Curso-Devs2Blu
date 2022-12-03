@@ -1,0 +1,20 @@
+﻿@model Devs2Blu.ProjetosAula.IntegrarAPI.Models.Food
+
+<div class="row" id="content-list">
+    @foreach (var item in Model.Meals)
+    {
+        <div class="card" style="width: 15rem;">
+                <div class="card-header">
+                        <img src="@item.strMealThumb" class="card-img-top">
+                </div>
+                <div class="card-body">
+                    <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between">
+                                    <span class="badge text-black col-4">@item.idMeal</span>
+                                <span>@item.strMeal</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    }
+</div>

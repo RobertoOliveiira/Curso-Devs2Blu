@@ -1,0 +1,21 @@
+﻿@using Devs2Blu.ProjetosAula.IntegrarAPI.Models
+@model Food
+@{
+    ViewData["Title"] = "API Pokemon";
+}
+
+<div class="text-center">
+    <h1 class="display-4">@ViewData["Title"]</h1>
+</div>
+
+
+<div class="row">
+    @foreach (var item in Model.Meals)
+    {
+            <div class="card col-4" style="width: 18rem;">
+                <div class="card-header bg-danger">
+                    <h2 class="text-white">@item.strMeal</h2>
+                </div>
+            </div>
+    }
+</div>
